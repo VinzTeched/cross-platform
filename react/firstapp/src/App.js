@@ -1,12 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Main from './Main'
+
 function Header() {
   return <h1>Hello world</h1>
 }
 
 function App() {
-  return <Header />;
+  return (
+    <>
+    <Header />
+    <Main userName="Daniel" />
+    </>
+  );
 }
 
 function Heading() {
