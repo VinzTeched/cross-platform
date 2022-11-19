@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button id="js-btn" onclick="clickHandler()">Click me!</button>
+
+        <script>
+            const jsBtn = document.getElementById("js-btn");
+            jsBtn.addEventListener('click', function () {
+                console.log("clicked");
+            });
+
+            function clickHandler() {
+                console.log('clicked3')
+            }
+        </script>
+    </body>
+</html>
