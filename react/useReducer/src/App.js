@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import "./App.css";
 
 const reducer = (state, action) => {
   if(action.type === 'ride') return {money: state.money + 10}

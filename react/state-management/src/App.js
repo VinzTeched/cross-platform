@@ -7,7 +7,7 @@ function App() {
   return (
       <div>
         <MealsProvider>
-          <MealsList/>
+          <MealsList />
           <Counter />
         </MealsProvider>
       </div>

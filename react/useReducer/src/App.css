@@ -7,7 +7,7 @@
   pointer-events: none;
 }
 
-button {margin-top: 20px; display:block; margin-left: 20px;}
+button:last-child {margin-left: 20px;}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
