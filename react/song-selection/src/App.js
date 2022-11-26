@@ -18,6 +18,14 @@ function App() {
     }
   };
 
+  function toggle2() {
+    if(bird2.paused) {
+      bird2.play();
+    } else {
+      bird2.pause();
+    }
+  }
+
   return (
     <div>
       <button onClick={toggle1}>Caspian Tern 1</button>
