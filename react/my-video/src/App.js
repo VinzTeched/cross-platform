@@ -4,6 +4,7 @@ import ReactPlayer from "react-player"
 
 function App() {
 
+  const videoUrl = 'https://www.youtube.com/watch?v=ysz5S6PUM-U';
 
   return (
       <div className="App">
@@ -14,7 +15,7 @@ function App() {
 
 const MyVideo = () => {
   return (
-    <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+    <ReactPlayer url={videoUrl} playing={false} volume={0.5} />
   );
 };
 
