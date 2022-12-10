@@ -9,8 +9,9 @@ function Apples(props) {
             <div>
                 <h3>There are {props.number} apples.</h3>
             </div>
+            <p>I am done here</p>
         </div>
-    )
+    ) 
 }
 
 export default Apples;
