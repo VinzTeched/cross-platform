@@ -29,9 +29,7 @@ const SubscribeScreen = () => {
         onPress={() => { 
           if(validateEmail(email)) {
             Alert.alert('Thanks for subscribing, stay tuned!');
-          } else {
-            Alert.alert("error");
-          }
+          } 
         }}>
         <Text style={styles.buttonText}>Newsletter</Text> 
       </Pressable>
