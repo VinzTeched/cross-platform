@@ -20,11 +20,10 @@ const SubscribeScreen = () => {
         clearButtonMode="always"
         keyboardType='email-address'  />
       <Pressable 
-        style={styles.button} 
+        style={[styles.button, newsletter === true ? {backgroundColor: 'gray'} : {backgroundColor: 'green'} ]} 
         onPress={() => {
-            Alert.alert(newsletter);
-            if(newsletter){
-             /* setNewsletter(!newsletter);*/
+            if(validateEmail(email)){
+              setNewsletter(!newsletter);
               Alert.alert('Thanks for subscribing, stay tuned!');
             } else {
               Alert.alert('Email is wrong');
