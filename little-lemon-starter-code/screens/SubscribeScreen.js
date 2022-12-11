@@ -4,12 +4,8 @@ import { validateEmail } from "../utils";
 
 const SubscribeScreen = () => {
   // Add subscribe screen code here
-  const [email, setEmail] = React.useState('');
-  const [isDisabled, setIsDisabled] = React.useState(true);
-
-  React.useEffect(() => {
-    setIsDisabled(!validateEmail(email));
-  }, [email]);
+  const [newsletter, setNewsletter] = React.useState(false);
+  const [email, onChangeEmail] = React.useState('');
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding": "position"}>
@@ -20,20 +16,21 @@ const SubscribeScreen = () => {
         value={email}
         placeholder='Type your email' 
         style={styles.textInput} 
-        onChangeText={setEmail}
+        onChangeText={onChangeEmail}
         clearButtonMode="always"
         keyboardType='email-address'  />
       <Pressable 
-        disabled={isDisabled}
-        style={[styles.button, isDisabled === true ? {backgroundColor: 'gray'} : {backgroundColor: 'green'} ]} 
-        onPress={() => { 
-          if(validateEmail(email)) {
-            Alert.alert('Thanks for subscribing, stay tuned!');
-          } else {
-            Alert.alert("error");
+        style={[styles.button, newsletter === true ? {backgroundColor: 'gray'} : {backgroundColor: 'green'} ]} 
+        onPress={() => {
+            if(validateEmail(email)){
+              setNewsletter(!newsletter);
+              Alert.alert('Thanks for subscribing, stay tuned!');
+            } else {
+              Alert.alert('Email is wrong');
+            }
           }
-        }}>
-        <Text style={styles.buttonText}>Newsletter</Text> 
+        }>
+        <Text style={styles.buttonText}>Newsletter</Text>
       </Pressable>
       </ScrollView>
     </KeyboardAvoidingView>
