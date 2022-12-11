@@ -1,0 +1,7 @@
+      <View style={styles.container}>
+        <LittleLemonHeader />
+        <LittleLemonWelcome />
+      </View>
+      <View style={{backgroundColor: '#333'}}>
+        <LittleLemonFooter />
+      </View>
