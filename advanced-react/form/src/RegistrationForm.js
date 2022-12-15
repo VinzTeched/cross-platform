@@ -20,14 +20,27 @@ const RegistrationForm = () => {
 
   const getIsFormValid = () => {
     // Implement this function
-    return true;
+    if(firstName !== '' && lastName !== '' && email !== '' && role !== 'role' && validateEmail(email)) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   const clearForm = () => {
     // Implement this function
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword({
+      value: "",
+      isTouched: false,
+    });
+    setRole("role");
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     alert("Account created!");
     clearForm();
   };
@@ -57,7 +70,16 @@ const RegistrationForm = () => {
             <label>
               Password <sup>*</sup>
             </label>
-            <input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input placeholder="Password" value={password.value} 
+              onChange={(e) => {
+                setPassword({...password, value: e.target.value});
+              }} 
+              onBlur={() => {
+                setPassword({...password, isTouched: true})
+              }} />
+
+              { password.value.length < 8 && password.isTouched ? (<PasswordErrorMessage />) : null }
+         
           </div>
           <div className="Field">
             <label>
