@@ -6,7 +6,6 @@ import Forme from './Forme';
 import FormFile from './FormFile';
 import Invitation from './Formik';
 import FormikSignupForm from './FormikSignupForm';
-import { Header, Page } from './ReactContext';
 import RegistrationForm from './RegistrationForm';
 import { UserProvider } from './UserContext';
 
@@ -14,10 +13,8 @@ import { UserProvider } from './UserContext';
 function App() {
 
   return (
-    <div className="">
-      <Header />
-      <Page />
-      <p>dadsd</p>
+    <div className="App">
+      <FormikSignupForm />
     </div>
   );
 }
@@ -30,4 +27,4 @@ function Root() {
   )
 }
 
-export default Root;
+export default App;
