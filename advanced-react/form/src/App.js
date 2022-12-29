@@ -17,7 +17,6 @@ function App() {
     <div className="">
       <Header />
       <Page />
-      <p>dadsd</p>
     </div>
   );
 }
@@ -30,4 +29,4 @@ function Root() {
   )
 }
 
-export default App;
+export default Root;
