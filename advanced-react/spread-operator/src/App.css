@@ -1,0 +1,32 @@
+.App {
+  padding: 40px 125px;
+  background-color: #ddd;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.Header {
+  font-size: 20px;
+  text-align: center;
+}
+
+.PrimaryButton {
+  background-color: blue;
+  width: 350px;
+  height: 40px;
+  margin: 20px;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.SecondaryButton {
+  background-color: blueviolet;
+  width: 350px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  margin: 20px;
+}
