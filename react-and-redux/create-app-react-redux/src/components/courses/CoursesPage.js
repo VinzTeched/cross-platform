@@ -7,6 +7,7 @@ import { bindActionCreators } from "redux";
 import CourseList from "./CourseList";
 import { Redirect } from "react-router-dom";
 import Spinner from "../partial/Spinner";
+
 import { toast } from "react-toastify";
 
 class CoursesPage extends React.Component {
