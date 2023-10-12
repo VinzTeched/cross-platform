@@ -8,8 +8,10 @@ const TextInput = ({ name, label, onChange, placeholder, value, error }) => {
   }
 
   return (
-    <div className={wrapperClass}>
-      <label htmlFor={name}>{label}</label>
+    <div className={{ wrapperClass }}>
+      <label htmlFor={name} className="mt-2">
+        {label}
+      </label>
       <div className="field">
         <input
           type="text"
@@ -31,7 +33,7 @@ TextInput.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  error: PropTypes.string
+  error: PropTypes.string,
 };
 
 export default TextInput;
